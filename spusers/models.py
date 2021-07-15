@@ -31,3 +31,4 @@ class Image(models.Model):
     image = models.ImageField(blank=True, null=True, upload_to='images/')
     user = models.ForeignKey(User, default=None, on_delete=models.CASCADE,)
     created = models.DateTimeField(auto_now_add=True)
+    is_profile = models.BooleanField(default=True)
